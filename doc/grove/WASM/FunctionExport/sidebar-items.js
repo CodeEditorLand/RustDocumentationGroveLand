@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"struct":["ExportConfig","FunctionExportImpl","FunctionStats","HostFunctionRegistry"]};
+window.SIDEBAR_ITEMS = {"struct":["ExportConfig","FunctionExportImpl","FunctionStats","HostFunctionRegistry","RegisteredHostFunction"]};

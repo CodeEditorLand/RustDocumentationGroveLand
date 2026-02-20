@@ -3,42 +3,42 @@
 <a href=#3 id=3 data-nosnippet>3</a>//! Entry point for the standalone Grove binary.
 <a href=#4 id=4 data-nosnippet>4</a>//! Provides CLI argument parsing and initialization.
 <a href=#5 id=5 data-nosnippet>5</a>
-<a href=#6 id=6 data-nosnippet>6</a></span><span class="kw">pub mod </span>Entry;
+<a href=#6 id=6 data-nosnippet>6</a></span><span class="kw">pub mod </span><a href="Entry.rs.html#1-311">Entry</a>;
 <a href=#7 id=7 data-nosnippet>7</a>
 <a href=#8 id=8 data-nosnippet>8</a><span class="doccomment">/// Main entry result
-<a href=#9 id=9 data-nosnippet>9</a></span><span class="kw">pub type </span>MainResult&lt;T&gt; = anyhow::Result&lt;T&gt;;
+<a href=#9 id=9 data-nosnippet>9</a></span><span class="kw">pub type </span><a href="../../../../grove/Binary/Main/type.MainResult.html">MainResult</a>&lt;T&gt; = anyhow::<a href="https://docs.rs/anyhow/1.0.102/anyhow/type.Result.html">Result</a>&lt;T&gt;;
 <a href=#10 id=10 data-nosnippet>10</a>
 <a href=#11 id=11 data-nosnippet>11</a><span class="doccomment">/// CLI arguments wrapper
-<a href=#12 id=12 data-nosnippet>12</a></span><span class="attr">#[derive(Debug, Clone)]
-<a href=#13 id=13 data-nosnippet>13</a></span><span class="kw">pub struct </span>CliArgs {
+<a href=#12 id=12 data-nosnippet>12</a></span><span class="attr">#[derive(<a href="https://doc.rust-lang.org/nightly/core/fmt/macros/derive.Debug.html">Debug</a>, <a href="https://doc.rust-lang.org/nightly/core/clone/derive.Clone.html">Clone</a>)]
+<a href=#13 id=13 data-nosnippet>13</a></span><span class="kw">pub struct </span><a href="../../../../grove/Binary/Main/struct.CliArgs.html">CliArgs</a> {
 <a href=#14 id=14 data-nosnippet>14</a>	<span class="doccomment">/// Mode of operation
-<a href=#15 id=15 data-nosnippet>15</a>	</span><span class="kw">pub </span>mode:String,
+<a href=#15 id=15 data-nosnippet>15</a>	</span><span class="kw">pub </span>mode:<a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a>,
 <a href=#16 id=16 data-nosnippet>16</a>	<span class="doccomment">/// Extension path
-<a href=#17 id=17 data-nosnippet>17</a>	</span><span class="kw">pub </span>extension:<span class="prelude-ty">Option</span>&lt;String&gt;,
+<a href=#17 id=17 data-nosnippet>17</a>	</span><span class="kw">pub </span>extension:<a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;<a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a>&gt;,
 <a href=#18 id=18 data-nosnippet>18</a>	<span class="doccomment">/// Transport type
-<a href=#19 id=19 data-nosnippet>19</a>	</span><span class="kw">pub </span>transport:String,
+<a href=#19 id=19 data-nosnippet>19</a>	</span><span class="kw">pub </span>transport:<a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a>,
 <a href=#20 id=20 data-nosnippet>20</a>	<span class="doccomment">/// gRPC address
-<a href=#21 id=21 data-nosnippet>21</a>	</span><span class="kw">pub </span>grpc_address:String,
+<a href=#21 id=21 data-nosnippet>21</a>	</span><span class="kw">pub </span>grpc_address:<a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a>,
 <a href=#22 id=22 data-nosnippet>22</a>	<span class="doccomment">/// Mountain address (for service mode)
-<a href=#23 id=23 data-nosnippet>23</a>	</span><span class="kw">pub </span>mountain_address:String,
+<a href=#23 id=23 data-nosnippet>23</a>	</span><span class="kw">pub </span>mountain_address:<a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a>,
 <a href=#24 id=24 data-nosnippet>24</a>	<span class="doccomment">/// Enable WASI
-<a href=#25 id=25 data-nosnippet>25</a>	</span><span class="kw">pub </span>wasi:bool,
+<a href=#25 id=25 data-nosnippet>25</a>	</span><span class="kw">pub </span>wasi:<a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
 <a href=#26 id=26 data-nosnippet>26</a>	<span class="doccomment">/// Memory limit in MB
-<a href=#27 id=27 data-nosnippet>27</a>	</span><span class="kw">pub </span>memory_limit_mb:u64,
+<a href=#27 id=27 data-nosnippet>27</a>	</span><span class="kw">pub </span>memory_limit_mb:<a href="https://doc.rust-lang.org/nightly/std/primitive.u64.html">u64</a>,
 <a href=#28 id=28 data-nosnippet>28</a>	<span class="doccomment">/// Max execution time in ms
-<a href=#29 id=29 data-nosnippet>29</a>	</span><span class="kw">pub </span>max_execution_time_ms:u64,
+<a href=#29 id=29 data-nosnippet>29</a>	</span><span class="kw">pub </span>max_execution_time_ms:<a href="https://doc.rust-lang.org/nightly/std/primitive.u64.html">u64</a>,
 <a href=#30 id=30 data-nosnippet>30</a>	<span class="doccomment">/// Enable verbose logging
-<a href=#31 id=31 data-nosnippet>31</a>	</span><span class="kw">pub </span>verbose:bool,
+<a href=#31 id=31 data-nosnippet>31</a>	</span><span class="kw">pub </span>verbose:<a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
 <a href=#32 id=32 data-nosnippet>32</a>}
 <a href=#33 id=33 data-nosnippet>33</a>
-<a href=#34 id=34 data-nosnippet>34</a><span class="kw">impl </span>Default <span class="kw">for </span>CliArgs {
+<a href=#34 id=34 data-nosnippet>34</a><span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html">Default</a> <span class="kw">for </span><a href="#13-32">CliArgs</a> {
 <a href=#35 id=35 data-nosnippet>35</a>	<span class="kw">fn </span>default() -&gt; <span class="self">Self </span>{
 <a href=#36 id=36 data-nosnippet>36</a>		<span class="self">Self </span>{
-<a href=#37 id=37 data-nosnippet>37</a>			mode:<span class="string">"standalone"</span>.to_string(),
-<a href=#38 id=38 data-nosnippet>38</a>			extension:<span class="prelude-val">None</span>,
-<a href=#39 id=39 data-nosnippet>39</a>			transport:<span class="string">"wasm"</span>.to_string(),
-<a href=#40 id=40 data-nosnippet>40</a>			grpc_address:<span class="string">"127.0.0.1:50051"</span>.to_string(),
-<a href=#41 id=41 data-nosnippet>41</a>			mountain_address:<span class="string">"127.0.0.1:50050"</span>.to_string(),
+<a href=#37 id=37 data-nosnippet>37</a>			mode:<span class="string">"standalone"</span>.<a href="https://doc.rust-lang.org/nightly/alloc/string/trait.ToString.html#tymethod.to_string">to_string</a>(),
+<a href=#38 id=38 data-nosnippet>38</a>			extension:<a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>,
+<a href=#39 id=39 data-nosnippet>39</a>			transport:<span class="string">"wasm"</span>.<a href="https://doc.rust-lang.org/nightly/alloc/string/trait.ToString.html#tymethod.to_string">to_string</a>(),
+<a href=#40 id=40 data-nosnippet>40</a>			grpc_address:<span class="string">"127.0.0.1:50051"</span>.<a href="https://doc.rust-lang.org/nightly/alloc/string/trait.ToString.html#tymethod.to_string">to_string</a>(),
+<a href=#41 id=41 data-nosnippet>41</a>			mountain_address:<span class="string">"127.0.0.1:50050"</span>.<a href="https://doc.rust-lang.org/nightly/alloc/string/trait.ToString.html#tymethod.to_string">to_string</a>(),
 <a href=#42 id=42 data-nosnippet>42</a>			wasi:<span class="bool-val">true</span>,
 <a href=#43 id=43 data-nosnippet>43</a>			memory_limit_mb:<span class="number">512</span>,
 <a href=#44 id=44 data-nosnippet>44</a>			max_execution_time_ms:<span class="number">30000</span>,
