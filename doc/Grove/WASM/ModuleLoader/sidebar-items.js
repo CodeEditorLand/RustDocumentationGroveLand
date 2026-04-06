@@ -1,1 +1,13 @@
-window.SIDEBAR_ITEMS = {"enum":["ImportKind","ModuleSourceType"],"fn":["generate_instance_id","generate_module_id"],"struct":["Exports","ImportDeclaration","ModuleInfo","ModuleLoadOptions","ModuleLoaderImpl","WASMInstance","WASMModule"]};
+window.SIDEBAR_ITEMS = {
+	"enum": ["ImportKind", "ModuleSourceType"],
+	"fn": ["generate_instance_id", "generate_module_id"],
+	"struct": [
+		"Exports",
+		"ImportDeclaration",
+		"ModuleInfo",
+		"ModuleLoadOptions",
+		"ModuleLoaderImpl",
+		"WASMInstance",
+		"WASMModule",
+	],
+};

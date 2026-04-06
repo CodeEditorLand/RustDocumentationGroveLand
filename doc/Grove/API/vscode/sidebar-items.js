@@ -1,1 +1,23 @@
-window.SIDEBAR_ITEMS = {"enum":["CompletionTriggerKind"],"struct":["Command","CommandNamespace","CompletionContext","DiagnosticCollection","Disposable","DocumentFilter","Env","Extension","ExtensionNamespace","LanguageNamespace","OutputChannel","VSCodeAPI","Window","Workspace","WorkspaceConfiguration","WorkspaceFolder"],"trait":["CompletionItemProvider"],"type":["CommandCallback","DocumentSelector"]};
+window.SIDEBAR_ITEMS = {
+	"enum": ["CompletionTriggerKind"],
+	"struct": [
+		"Command",
+		"CommandNamespace",
+		"CompletionContext",
+		"DiagnosticCollection",
+		"Disposable",
+		"DocumentFilter",
+		"Env",
+		"Extension",
+		"ExtensionNamespace",
+		"LanguageNamespace",
+		"OutputChannel",
+		"VSCodeAPI",
+		"Window",
+		"Workspace",
+		"WorkspaceConfiguration",
+		"WorkspaceFolder",
+	],
+	"trait": ["CompletionItemProvider"],
+	"type": ["CommandCallback", "DocumentSelector"],
+};

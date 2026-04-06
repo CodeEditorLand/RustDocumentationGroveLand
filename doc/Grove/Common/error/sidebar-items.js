@@ -1,1 +1,5 @@
-window.SIDEBAR_ITEMS = {"enum":["GroveError"],"trait":["ResultExt"],"type":["GroveResult"]};
+window.SIDEBAR_ITEMS = {
+	"enum": ["GroveError"],
+	"trait": ["ResultExt"],
+	"type": ["GroveResult"],
+};

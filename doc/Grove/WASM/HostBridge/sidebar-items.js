@@ -1,1 +1,23 @@
-window.SIDEBAR_ITEMS = {"enum":["BridgeError","ParamType","ReturnType"],"fn":["deserialize_from_bytes","marshal_args","serialize_to_bytes","unmarshal_return"],"struct":["AsyncCallback","FunctionSignature","HostBridgeImpl","HostFunction","HostMessage","HostResponse","WASMMessage"],"type":["AsyncHostFunctionCallback","BridgeResult","HostFunctionCallback"]};
+window.SIDEBAR_ITEMS = {
+	"enum": ["BridgeError", "ParamType", "ReturnType"],
+	"fn": [
+		"deserialize_from_bytes",
+		"marshal_args",
+		"serialize_to_bytes",
+		"unmarshal_return",
+	],
+	"struct": [
+		"AsyncCallback",
+		"FunctionSignature",
+		"HostBridgeImpl",
+		"HostFunction",
+		"HostMessage",
+		"HostResponse",
+		"WASMMessage",
+	],
+	"type": [
+		"AsyncHostFunctionCallback",
+		"BridgeResult",
+		"HostFunctionCallback",
+	],
+};

@@ -1,1 +1,10 @@
-window.SIDEBAR_ITEMS = {"mod":["APIBridge","Activation","ExtensionHost","ExtensionManager","Lifecycle"],"struct":["ActivationResult","HostConfig"]};
+window.SIDEBAR_ITEMS = {
+	"mod": [
+		"APIBridge",
+		"Activation",
+		"ExtensionHost",
+		"ExtensionManager",
+		"Lifecycle",
+	],
+	"struct": ["ActivationResult", "HostConfig"],
+};

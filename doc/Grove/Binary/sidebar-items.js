@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"mod":["Build","Main"],"struct":["BinaryConfig"]};
+window.SIDEBAR_ITEMS = { "mod": ["Build", "Main"], "struct": ["BinaryConfig"] };

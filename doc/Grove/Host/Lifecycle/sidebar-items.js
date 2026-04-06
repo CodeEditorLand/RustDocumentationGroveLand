@@ -1,1 +1,9 @@
-window.SIDEBAR_ITEMS = {"enum":["LifecycleEvent","LifecycleState"],"struct":["LifecycleEventRecord","LifecycleHandlerInfo","LifecycleManager"],"type":["LifecycleEventHandler"]};
+window.SIDEBAR_ITEMS = {
+	"enum": ["LifecycleEvent", "LifecycleState"],
+	"struct": [
+		"LifecycleEventRecord",
+		"LifecycleHandlerInfo",
+		"LifecycleManager",
+	],
+	"type": ["LifecycleEventHandler"],
+};
