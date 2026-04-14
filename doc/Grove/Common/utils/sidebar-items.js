@@ -1,10 +1,1 @@
-window.SIDEBAR_ITEMS = {
-	"fn": [
-		"generate_id",
-		"now_unix_timestamp",
-		"now_unix_timestamp_ms",
-		"now_unix_timestamp_us",
-		"sleep_ms",
-		"sleep_sec",
-	],
-};
+window.SIDEBAR_ITEMS = {"fn":["generate_id","now_unix_timestamp","now_unix_timestamp_ms","now_unix_timestamp_us","sleep_ms","sleep_sec"]};

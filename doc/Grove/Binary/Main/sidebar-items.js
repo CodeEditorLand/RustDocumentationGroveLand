@@ -1,5 +1,1 @@
-window.SIDEBAR_ITEMS = {
-	"mod": ["Entry"],
-	"struct": ["CliArgs"],
-	"type": ["MainResult"],
-};
+window.SIDEBAR_ITEMS = {"mod":["Entry"],"struct":["CliArgs"],"type":["MainResult"]};

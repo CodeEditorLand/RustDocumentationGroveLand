@@ -1,89 +1,4 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-		<meta content="rustdoc" name="generator" />
-		<meta
-			content="Source of the Rust file `Element/Grove/Source/Transport/WASMTransport.rs`."
-			name="description" />
-		<title>WASMTransport.rs - source</title>
-		<script>
-			if (window.location.protocol !== "file:")
-				document.head.insertAdjacentHTML(
-					"beforeend",
-					"SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2"
-						.split(",")
-						.map(
-							(f) =>
-								`<link rel="preload" as="font" type="font/woff2"href="../../../static.files/${f}">`,
-						)
-						.join(""),
-				);
-		</script>
-		<link
-			href="../../../static.files/normalize-9960930a.css"
-			rel="stylesheet" />
-		<link
-			href="../../../static.files/rustdoc-b7b9f40b.css"
-			rel="stylesheet" />
-		<meta
-			name="rustdoc-vars"
-			data-channel="nightly"
-			data-current-crate="Grove"
-			data-resource-suffix=""
-			data-root-path="../../../"
-			data-rustdoc-version="1.96.0-nightly (b41f22de2 2026-03-08)"
-			data-search-js="search-63369b7b.js"
-			data-settings-js="settings-170eb4bf.js"
-			data-static-root-path="../../../static.files/"
-			data-stringdex-js="stringdex-b897f86f.js"
-			data-themes="" />
-		<script src="../../../static.files/storage-41dd4d93.js"></script>
-		<script
-			defer
-			src="../../../static.files/src-script-813739b1.js"></script>
-		<script defer src="../../../src-files.js"></script>
-		<script defer src="../../../static.files/main-5013f961.js"></script>
-		<noscript
-			><link
-				href="../../../static.files/noscript-f7c3ffd8.css"
-				rel="stylesheet"
-		/></noscript>
-		<link
-			href="../../../static.files/favicon-32x32-eab170b8.png"
-			rel="alternate icon"
-			type="image/png" />
-		<link
-			href="../../../static.files/favicon-044be391.svg"
-			rel="icon"
-			type="image/svg+xml" />
-	</head>
-	<body class="rustdoc src">
-		<a class="skip-main-content" href="#main-content"
-			>Skip to main content</a
-		><!--[if lte IE 11
-			]><div class="warning">
-				This old browser is unsupported and will most likely display
-				funky things.
-			</div><!
-		[endif]-->
-		<nav class="sidebar">
-			<div class="src-sidebar-title"><h2>Files</h2></div>
-		</nav>
-		<div class="sidebar-resizer" title="Drag to resize sidebar"></div>
-		<main>
-			<section class="content" id="main-content" tabindex="-1">
-				<div class="main-heading">
-					<h1>
-						<div class="sub-heading">Grove/Transport/</div>
-						WASMTransport.rs
-					</h1>
-					<rustdoc-toolbar></rustdoc-toolbar>
-				</div>
-				<div class="example-wrap digits-3">
-					<pre
-						class="rust"><code><a href=#1 id=1 data-nosnippet>1</a><span class="doccomment">//! WASM Transport Implementation
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `Element/Grove/Source/Transport/WASMTransport.rs`."><title>WASMTransport.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2"href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-b7b9f40b.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="Grove" data-themes="" data-resource-suffix="" data-rustdoc-version="1.96.0-nightly (b41f22de2 2026-03-08)" data-channel="nightly" data-search-js="search-63369b7b.js" data-stringdex-js="stringdex-b897f86f.js" data-settings-js="settings-170eb4bf.js" ><script src="../../../static.files/storage-41dd4d93.js"></script><script defer src="../../../static.files/src-script-813739b1.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5013f961.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-f7c3ffd8.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-eab170b8.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><a class="skip-main-content" href="#main-content">Skip to main content</a><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><section id="main-content" class="content" tabindex="-1"><div class="main-heading"><h1><div class="sub-heading">Grove/Transport/</div>WASMTransport.rs</h1><rustdoc-toolbar></rustdoc-toolbar></div><div class="example-wrap digits-3"><pre class="rust"><code><a href=#1 id=1 data-nosnippet>1</a><span class="doccomment">//! WASM Transport Implementation
 <a href=#2 id=2 data-nosnippet>2</a>//!
 <a href=#3 id=3 data-nosnippet>3</a>//! Provides direct communication with WASM modules.
 <a href=#4 id=4 data-nosnippet>4</a>//! Handles calls to and from WebAssembly instances.
@@ -99,8 +14,8 @@
 <a href=#14 id=14 data-nosnippet>14</a>
 <a href=#15 id=15 data-nosnippet>15</a><span class="kw">use </span>crate::{
 <a href=#16 id=16 data-nosnippet>16</a>	Transport::{
-<a href=#17 id=17 data-nosnippet>17</a>		Strategy::{<a href="Strategy.rs.html#285-300">TransportStats</a>, <a href="Strategy.rs.html#23-44">TransportStrategy</a>, <a href="Strategy.rs.html#48-57">TransportType</a>},
-<a href=#18 id=18 data-nosnippet>18</a>		<a href="mod.rs.html#48-61">TransportConfig</a>,
+<a href=#17 id=17 data-nosnippet>17</a>		Strategy::{<a href="Strategy.rs.html#280-295">TransportStats</a>, <a href="Strategy.rs.html#19-40">TransportStrategy</a>, <a href="Strategy.rs.html#44-53">TransportType</a>},
+<a href=#18 id=18 data-nosnippet>18</a>		<a href="mod.rs.html#49-62">TransportConfig</a>,
 <a href=#19 id=19 data-nosnippet>19</a>	},
 <a href=#20 id=20 data-nosnippet>20</a>	WASM::{
 <a href=#21 id=21 data-nosnippet>21</a>		<a href="../WASM/HostBridge.rs.html#184-195">HostBridge::HostBridgeImpl</a>,
@@ -123,11 +38,11 @@
 <a href=#38 id=38 data-nosnippet>38</a>	</span>modules:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>&lt;RwLock&lt;<a href="https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html">HashMap</a>&lt;<a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a>, <a href="#50-61">WASMModuleInfo</a>&gt;&gt;&gt;,
 <a href=#39 id=39 data-nosnippet>39</a>	<span class="doccomment">/// Transport configuration
 <a href=#40 id=40 data-nosnippet>40</a>	</span><span class="attr">#[allow(dead_code)]
-<a href=#41 id=41 data-nosnippet>41</a>	</span>config:<a href="mod.rs.html#48-61">TransportConfig</a>,
+<a href=#41 id=41 data-nosnippet>41</a>	</span>config:<a href="mod.rs.html#49-62">TransportConfig</a>,
 <a href=#42 id=42 data-nosnippet>42</a>	<span class="doccomment">/// Connection state
 <a href=#43 id=43 data-nosnippet>43</a>	</span>connected:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>&lt;RwLock&lt;<a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>&gt;&gt;,
 <a href=#44 id=44 data-nosnippet>44</a>	<span class="doccomment">/// Transport statistics
-<a href=#45 id=45 data-nosnippet>45</a>	</span>stats:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>&lt;RwLock&lt;<a href="Strategy.rs.html#285-300">TransportStats</a>&gt;&gt;,
+<a href=#45 id=45 data-nosnippet>45</a>	</span>stats:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>&lt;RwLock&lt;<a href="Strategy.rs.html#280-295">TransportStats</a>&gt;&gt;,
 <a href=#46 id=46 data-nosnippet>46</a>}
 <a href=#47 id=47 data-nosnippet>47</a>
 <a href=#48 id=48 data-nosnippet>48</a><span class="doccomment">/// Information about a loaded WASM module
@@ -201,14 +116,14 @@
 <a href=#116 id=116 data-nosnippet>116</a>			<a href="#111">memory_manager</a>,
 <a href=#117 id=117 data-nosnippet>117</a>			<a href="#112">bridge</a>,
 <a href=#118 id=118 data-nosnippet>118</a>			modules:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>::<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html#method.new">new</a>(RwLock::new(<a href="https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html">HashMap</a>::<a href="https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html#method.new">new</a>())),
-<a href=#119 id=119 data-nosnippet>119</a>			config:<a href="mod.rs.html#48-61">TransportConfig</a>::<a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">default</a>(),
+<a href=#119 id=119 data-nosnippet>119</a>			config:<a href="mod.rs.html#49-62">TransportConfig</a>::<a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">default</a>(),
 <a href=#120 id=120 data-nosnippet>120</a>			connected:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>::<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html#method.new">new</a>(RwLock::new(<span class="bool-val">true</span>)), <span class="comment">// WASM transport is always "connected" locally
-<a href=#121 id=121 data-nosnippet>121</a>			</span>stats:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>::<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html#method.new">new</a>(RwLock::new(<a href="Strategy.rs.html#285-300">TransportStats</a>::<a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">default</a>())),
+<a href=#121 id=121 data-nosnippet>121</a>			</span>stats:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>::<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html#method.new">new</a>(RwLock::new(<a href="Strategy.rs.html#280-295">TransportStats</a>::<a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">default</a>())),
 <a href=#122 id=122 data-nosnippet>122</a>		})
 <a href=#123 id=123 data-nosnippet>123</a>	}
 <a href=#124 id=124 data-nosnippet>124</a>
 <a href=#125 id=125 data-nosnippet>125</a>	<span class="doccomment">/// Create a new WASM transport with custom configuration
-<a href=#126 id=126 data-nosnippet>126</a>	</span><span class="kw">pub fn </span>with_config(wasm_config:<a href="../WASM/Runtime.rs.html#22-37">WASMConfig</a>, transport_config:<a href="mod.rs.html#48-61">TransportConfig</a>) -&gt; anyhow::<a href="https://docs.rs/anyhow/1.0.102/anyhow/type.Result.html">Result</a>&lt;<span class="self">Self</span>&gt; {
+<a href=#126 id=126 data-nosnippet>126</a>	</span><span class="kw">pub fn </span>with_config(wasm_config:<a href="../WASM/Runtime.rs.html#22-37">WASMConfig</a>, transport_config:<a href="mod.rs.html#49-62">TransportConfig</a>) -&gt; anyhow::<a href="https://docs.rs/anyhow/1.0.102/anyhow/type.Result.html">Result</a>&lt;<span class="self">Self</span>&gt; {
 <a href=#127 id=127 data-nosnippet>127</a>		<span class="kw">let </span>runtime_result = tokio::runtime::Runtime::new()
 <a href=#128 id=128 data-nosnippet>128</a>			.<a href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#method.map_err">map_err</a>(|e| <a href="https://docs.rs/anyhow/1.0.102/anyhow/macro.anyhow.html">anyhow::anyhow!</a>(<span class="string">"Failed to create tokio runtime: {}"</span>, e))<span class="question-mark">?
 <a href=#129 id=129 data-nosnippet>129</a>			</span>.block_on(<a href="../WASM/Runtime.rs.html#106-111">WASMRuntime</a>::<a href="../WASM/Runtime.rs.html#116-141">new</a>(<a href="#126">wasm_config</a>.<a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">clone</a>()))
@@ -230,7 +145,7 @@
 <a href=#145 id=145 data-nosnippet>145</a>			modules:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>::<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html#method.new">new</a>(RwLock::new(<a href="https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html">HashMap</a>::<a href="https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html#method.new">new</a>())),
 <a href=#146 id=146 data-nosnippet>146</a>			config:<a href="#126">transport_config</a>,
 <a href=#147 id=147 data-nosnippet>147</a>			connected:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>::<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html#method.new">new</a>(RwLock::new(<span class="bool-val">true</span>)),
-<a href=#148 id=148 data-nosnippet>148</a>			stats:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>::<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html#method.new">new</a>(RwLock::new(<a href="Strategy.rs.html#285-300">TransportStats</a>::<a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">default</a>())),
+<a href=#148 id=148 data-nosnippet>148</a>			stats:<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html">Arc</a>::<a href="https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html#method.new">new</a>(RwLock::new(<a href="Strategy.rs.html#280-295">TransportStats</a>::<a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">default</a>())),
 <a href=#149 id=149 data-nosnippet>149</a>		})
 <a href=#150 id=150 data-nosnippet>150</a>	}
 <a href=#151 id=151 data-nosnippet>151</a>
@@ -305,7 +220,7 @@
 <a href=#220 id=220 data-nosnippet>220</a>}
 <a href=#221 id=221 data-nosnippet>221</a>
 <a href=#222 id=222 data-nosnippet>222</a><span class="attr">#[async_trait]
-<a href=#223 id=223 data-nosnippet>223</a></span><span class="kw">impl </span><a href="Strategy.rs.html#23-44">TransportStrategy</a> <span class="kw">for </span><a href="#30-46">WASMTransportImpl</a> {
+<a href=#223 id=223 data-nosnippet>223</a></span><span class="kw">impl </span><a href="Strategy.rs.html#19-40">TransportStrategy</a> <span class="kw">for </span><a href="#30-46">WASMTransportImpl</a> {
 <a href=#224 id=224 data-nosnippet>224</a>	<span class="kw">type </span>Error = <a href="#317-353">WASMTransportError</a>;
 <a href=#225 id=225 data-nosnippet>225</a>
 <a href=#226 id=226 data-nosnippet>226</a>	<span class="attr">#[instrument(skip(<span class="self">self</span>))]
@@ -394,7 +309,7 @@
 <a href=#309 id=309 data-nosnippet>309</a>
 <a href=#310 id=310 data-nosnippet>310</a>	<span class="kw">fn </span>is_connected(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> { <a class="self" href="#310">self</a>.connected.blocking_read().<a href="https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html#tymethod.to_owned">to_owned</a>() }
 <a href=#311 id=311 data-nosnippet>311</a>
-<a href=#312 id=312 data-nosnippet>312</a>	<span class="kw">fn </span>transport_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="Strategy.rs.html#48-57">TransportType</a> { TransportType::<a href="Strategy.rs.html#54">WASM</a> }
+<a href=#312 id=312 data-nosnippet>312</a>	<span class="kw">fn </span>transport_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="Strategy.rs.html#44-53">TransportType</a> { TransportType::<a href="Strategy.rs.html#50">WASM</a> }
 <a href=#313 id=313 data-nosnippet>313</a>}
 <a href=#314 id=314 data-nosnippet>314</a>
 <a href=#315 id=315 data-nosnippet>315</a><span class="doccomment">/// WASM transport errors
@@ -475,9 +390,4 @@
 <a href=#390 id=390 data-nosnippet>390</a>		<span class="macro">assert_eq!</span>(stats.active_instances, <span class="number">0</span>);
 <a href=#391 id=391 data-nosnippet>391</a>	}
 <a href=#392 id=392 data-nosnippet>392</a>}
-</code></pre>
-				</div>
-			</section>
-		</main>
-	</body>
-</html>
+</code></pre></div></section></main></body></html>

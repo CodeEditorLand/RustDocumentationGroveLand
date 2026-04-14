@@ -1,5 +1,1 @@
-window.SIDEBAR_ITEMS = {
-	"enum": ["ConfigurationScope"],
-	"struct": ["ConfigurationServiceImpl", "ConfigurationValue"],
-	"type": ["ConfigurationWatcherCallback"],
-};
+window.SIDEBAR_ITEMS = {"enum":["ConfigurationScope"],"struct":["ConfigurationServiceImpl","ConfigurationValue"],"type":["ConfigurationWatcherCallback"]};

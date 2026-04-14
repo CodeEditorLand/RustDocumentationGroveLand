@@ -1,3 +1,1 @@
-window.SIDEBAR_ITEMS = {
-	"fn": ["from_json_value", "is_null", "to_json_value"],
-};
+window.SIDEBAR_ITEMS = {"fn":["from_json_value","is_null","to_json_value"]};

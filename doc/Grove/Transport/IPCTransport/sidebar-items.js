@@ -1,4 +1,1 @@
-window.SIDEBAR_ITEMS = {
-	"enum": ["IPCTransportError"],
-	"struct": ["IPCTransport"],
-};
+window.SIDEBAR_ITEMS = {"enum":["IPCTransportError"],"struct":["IPCTransport"]};

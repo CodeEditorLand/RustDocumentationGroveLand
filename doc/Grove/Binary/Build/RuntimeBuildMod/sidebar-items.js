@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = { "struct": ["RuntimeBuild"] };
+window.SIDEBAR_ITEMS = {"struct":["RuntimeBuild"]};

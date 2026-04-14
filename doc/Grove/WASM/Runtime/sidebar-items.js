@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = { "struct": ["WASMConfig", "WASMRuntime"] };
+window.SIDEBAR_ITEMS = {"struct":["WASMConfig","WASMRuntime"]};

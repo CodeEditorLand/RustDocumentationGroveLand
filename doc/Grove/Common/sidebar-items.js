@@ -1,5 +1,1 @@
-window.SIDEBAR_ITEMS = {
-	"constant": ["VERSION"],
-	"mod": ["config", "error", "traits", "utils"],
-	"type": ["Result"],
-};
+window.SIDEBAR_ITEMS = {"constant":["VERSION"],"mod":["config","error","traits","utils"],"type":["Result"]};

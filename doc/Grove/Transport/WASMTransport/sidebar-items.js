@@ -1,4 +1,1 @@
-window.SIDEBAR_ITEMS = {
-	"enum": ["WASMTransportError"],
-	"struct": ["FunctionCallStats", "WASMModuleInfo", "WASMTransportImpl"],
-};
+window.SIDEBAR_ITEMS = {"enum":["WASMTransportError"],"struct":["FunctionCallStats","WASMModuleInfo","WASMTransportImpl"]};

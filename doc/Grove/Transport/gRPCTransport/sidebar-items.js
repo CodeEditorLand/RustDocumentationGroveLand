@@ -1,4 +1,1 @@
-window.SIDEBAR_ITEMS = {
-	"enum": ["gRPCTransportError"],
-	"struct": ["gRPCTransport"],
-};
+window.SIDEBAR_ITEMS = {"enum":["gRPCTransportError"],"struct":["gRPCTransport"]};
